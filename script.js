@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const taskInput = document.getElementById('task-input')
     const taskList = document.getElementById('task-list')
 
-    function addtask () {
+    function addTask () {
         let taskText = document.getElementById('task-input')
 
         if (taskText === "") {
@@ -26,16 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
         listItem.appendChild(newButton)
         taskList.appendChild(listItem)
 
-        taskInput.value = ""
+        taskInput.value.trim() = ""
     }
 
     addButton.addEventListener('click', function() {
-        addtask()
+        addTask()
     })
 
     taskInput.addEventListener('keypress', function(event) {
         if(event.key === "Enter"){
-            addtask();
+            addTask();
         }
     })
 })
